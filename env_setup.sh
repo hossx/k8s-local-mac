@@ -5,8 +5,8 @@
 
 rm -rf ./tools
 
-id=$(docker create hosschao/k8s-mac)
-docker cp $id:/tools ./tools
-docker rm -v $id
+id=$(docker create hosschao/k8s-mac) &&
+docker cp $id:/tools ./tools &&
+docker rm -v $id &&
 
 ./init.sh
